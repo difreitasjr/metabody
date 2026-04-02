@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaBody - Transforme seu corpo de dentro pra fora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&family=Helvetica:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset e variáveis */
+        :root {
+            --primary-pink: #D52F89;
+            --secondary-pink: #e270ae;
+            --dark-purple: #230047;
+            --light-pink-bg: #F9E3EF;
+            --white: #FFFFFF;
+            --black: #000000;
+            --yellow-star: #FFD200;
+            --gray: #ACACAC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-pink-bg);
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        /* Container principal */
+        .metabody-container {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+
+        /* Header rosa */
+        .metabody-header {
+            background-color: var(--primary-pink);
+            text-align: center;
+            padding: 20px 0;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+
+        /* Seção hero */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 840px;
+            padding: 50px 0;
+        }
+
+        .hero-content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 25px;
+        }
+
+        .hero-logo {
+            width: 35%;
+            max-width: 200px;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 45px;
+            font-weight: 400;
+            line-height: 55px;
+            color: var(--black);
+            width: 90%;
+        }
+
+        .hero-title span[style*="background: #D52F89"] {
+            background-color: var(--primary-pink);
+            color: var(--white);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            width: 80%;
+            font-weight: 600;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            margin-top: -50px;
+        }
+
+        /* Lista de benefícios */
+        .benefits-list {
+            width: 80%;
+            margin-top: -5px;
+        }
+
+        .benefits-list ul {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--black);
+        }
+
+        .benefits-list li::before {
+            content: "▶";
+            color: var(--dark-purple);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .benefits-list b {
+            font-weight: 600;
+        }
+
+        /* Botão animado */
+        .btn {
+            --btn-bg-1: var(--secondary-pink);
+            --btn-bg-2: var(--primary-pink);
+            --btn-bg-color: var(--secondary-pink);
+            --radii: 0.5em;
+            cursor: pointer;
+            transition: 1.8s;
+            background-size: 280% auto;
+            background-image: linear-gradient(
+                325deg,
+                var(--btn-bg-2) 0%,
+                var(--btn-bg-1) 55%,
+                var(--btn-bg-2) 90%
+            );
+            border: none;
+            border-radius: var(--radii);
+            color: var(--white);
+            font-family: 'Helvetica', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            padding: 20px 0;
+            width: 357px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-position: right top;
+        }
+
+        /* Avaliações */
+        .ratings {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stars {
+            color: var(--yellow-star);
+            font-size: 21px;
+        }
+
+        .rating-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            color: var(--black);
+        }
+
+        .rating-text b {
+            font-weight: 700;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .metabody-container {
+                padding: 30px 20px;
+            }
+
+            .metabody-header {
+                padding: 20px;
+                font-size: 14px;
+            }
+
+            .hero-section {
+                flex-direction: column;
+                min-height: auto;
+                padding: 30px 0;
+            }
+
+            .hero-content {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .hero-logo {
+                width: 50%;
+            }
+
+            .hero-title {
+                font-size: 30px;
+                line-height: 47px;
+                width: 100%;
+            }
+
+            .hero-description {
+                font-size: 20px;
+                width: 100%;
+            }
+
+            .hero-image {
+                width: 100%;
+                margin-top: 20px;
+                margin-left: -10px;
+            }
+
+            .benefits-list {
+                width: 100%;
+                font-size: 17px;
+            }
+
+            .benefits-list li {
+                font-size: 17px;
+            }
+
+            .btn {
+                width: 315px;
+                font-size: 18px;
+                padding: 15px 0;
+                height: 60px;
+            }
+
+            .stars {
+                font-size: 17px;
+            }
+
+            .rating-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="metabody-container">
+        <!-- Header rosa -->
+        <div class="metabody-header">
+            Atenção: promoção por tempo limitado, aproveite essa oportunidade!
+        </div>
+
+        <!-- Seção Hero -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <!-- Logo -->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABlJREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwGwABJgH5WQAAAABJRU5ErkJggg==" alt="BHC Logo Dourada" class="hero-logo">
+
+                <!-- Título -->
+                <h1 class="hero-title">
+                    <span style="font-weight:600">Transforme seu corpo </span>
+                    <span style="background: #D52F89; color: #ffffff;">de dentro pra fora</span>
+                    <span style="font-weight:600"> com o </span>
+                    <span style="font-weight:600">poder da natureza!</span>
+                </h1>
+
+                <!-- Descrição -->
+                <p class="hero-description">
+                    <span style="font-weight: 600;">Emagreça, defina e revele</span> uma pele mais firme e luminosa, <span style="font-weight: 600;">tudo em um único suplemento.</span>
+                </p>
+
+                <!-- Imagem Hero -->
+                <img src="data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoQAAwAAUAmJbACdLoAAeAAA/v3+738AAP7vf7vfAAA=" alt="MetaBody Hero" class="hero-image">
+
+                <!-- Lista de Benefícios -->
+                <div class="benefits-list">
+                    <ul>
+                        <li>Auxilia na redução de gordura e no <b>Controle do apetite;</b></li>
+                        <li><b>Preserva</b> a firmeza da pele;</li>
+                        <li>Acelera o metabolismo e <b>Evita o efeito sanfona;</b></li>
+                        <li>Ação <b>Antioxidante</b> e <b>Anti-inflamatória</b> natural;</li>
+                        <li><b>Resultados</b> visíveis <b>em poucas semanas;</b></li>
+                    </ul>
+                </div>
+
+                <!-- Botão -->
+                <a href="#comprar" class="btn">COMPRAR AGORA</a>
+
+                <!-- Avaliações -->
+                <div class="ratings">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-text"><b>4,6</b> de (3.184 Avaliações)</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
